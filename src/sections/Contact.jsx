@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from "@emailjs/browser";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -8,27 +9,36 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
-      try {
-          console.log("Form submitted:", formData);
-          emailjs.send("template_42ocnbb", "template_42ocnbb", {
-          from_name: formData.name,
-          to_name: "Elot",
-          from_email: formData.email,
-          to_email: "mr.godsplanelot@gmail.com",
-          message: formData.message,
-        });
-      } catch (error) {
-        
 
-
-
+    try {
+      console.log ("From submitted")
+      await emailjs.send("service_qllkveo", "template_42ocnbb", 
+        {
+        from_name: formData.name,
+        to_name: "Elot",
+        from_email: formData.email,
+        to_email: "mr.godsplanelot@gmail.com",
+        message: formData.message,
+      },
+    "gCERnudKpJVh9LScn");
       //service_qllkveo
       //template_42ocnbb
+      setIsLoading(false);
+      alert("success");
+      setFormData({name:"", email:"", message:""});
+    } catch (error) { 
+      setIsLoading(false);
+      console.log( error);
+      alert("Failed");
+     }
+
+
   };
 
   return (
