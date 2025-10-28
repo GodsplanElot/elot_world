@@ -3,17 +3,32 @@ import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-
+  const [isLoading, setIsLoading] = useState(false);  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    emailjs.send("template_42ocnbb", "");
-    //service_qllkveo
-    //template_42ocnbb
+    setIsLoading(true);
+
+      try {
+          console.log("Form submitted:", formData);
+          emailjs.send("template_42ocnbb", "template_42ocnbb", {
+          from_name: formData.name,
+          to_name: "Elot",
+          from_email: formData.email,
+          to_email: "mr.godsplanelot@gmail.com",
+          message: formData.message,
+        });
+      } catch (error) {
+        
+
+
+
+      //service_qllkveo
+      //template_42ocnbb
   };
 
   return (
@@ -76,7 +91,7 @@ const Contact = () => {
             type="submit"
             className="w-full px-6 py-3 mt-2 font-medium text-white rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:via-purple-500 hover:to-blue-500 hover-animation"
           >
-            Send
+            {!isLoading ? "Send" : "Sending..."}
           </button>
         </form>
       </div>
