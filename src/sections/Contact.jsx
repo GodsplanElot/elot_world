@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import emailjs from "@emailjs/browser";
+import Alert from '../components/Alert';
 
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);  
+  const [showAlert, setShowAlert] = useState( false);
+  const [alertType, setAlertType] = useState("success");
+  const [alertMessage, setAlertMessage] = useState("");
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -30,7 +34,9 @@ const Contact = () => {
       //service_qllkveo
       //template_42ocnbb
       setIsLoading(false);
-      alert("success");
+      setAlertType("success");
+      setAlertMessage("Your message has been sent successfully!");
+      setShowAlert(true);
       setFormData({name:"", email:"", message:""});
     } catch (error) { 
       setIsLoading(false);
@@ -43,6 +49,7 @@ const Contact = () => {
 
   return (
     <section className="relative flex items-center c-space section-spacing">
+      {showAlert &&  <Alert type={alertType} text={alertMessage} />}
       <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
         
         <div className="flex flex-col items-start w-full gap-5 mb-10">
