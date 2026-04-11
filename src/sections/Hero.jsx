@@ -16,14 +16,16 @@ const Hero = () => {
       <HeroText />
       <ParallaxBackground />
       <figure className="absolute inset-0" style={{width: "100vw", height: "100vh"}}>
-        <Canvas camera={{position: [0, 1, 3] }}>
+        <Canvas camera={{ position: [0, 1, 3] }} dpr={[1, 1.5]} gl={{ antialias: false }}>
           <Suspense fallback={<Loader />}>
-          <Float>
-            <Astronaut scale={isMobile && 0.23} 
-            position={isMobile && [0,-1.5, 0]} />
-          </Float>
-          <Rig />
-            </Suspense>
+            <Float>
+              <Astronaut
+                scale={isMobile && 0.23}
+                position={isMobile && [0, -1.5, 0]}
+              />
+            </Float>
+            <Rig />
+          </Suspense>
         </Canvas>
       </figure>
     </section>

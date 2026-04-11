@@ -1,7 +1,6 @@
 "use client";
 
 import createGlobe from "cobe";
-import { useMotionValue, useSpring } from "motion/react";
 import { useEffect, useRef } from "react";
 
 import { twMerge } from "tailwind-merge";
@@ -12,12 +11,12 @@ const GLOBE_CONFIG = {
   width: 800,
   height: 800,
   onRender: () => {},
-  devicePixelRatio: 2,
+  devicePixelRatio: 1.5,
   phi: 0,
   theta: 0.3,
   dark: 1,
   diffuse: 0.4,
-  mapSamples: 16000,
+  mapSamples: 8000,
   mapBrightness: 1.2,
   baseColor: [1, 1, 1],
   markerColor: [1, 1, 1],
@@ -43,25 +42,20 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
   const pointerInteracting = useRef(null);
   const pointerInteractionMovement = useRef(0);
 
-  const r = useMotionValue(0);
-  const rs = useSpring(r, {
-    mass: 1,
-    damping: 30,
-    stiffness: 100,
-  });
-
   const updatePointerInteraction = (value) => {
     pointerInteracting.current = value;
     if (canvasRef.current) {
       canvasRef.current.style.cursor = value !== null ? "grabbing" : "grab";
+    }
+    if (value === null) {
+      pointerInteractionMovement.current = 0;
     }
   };
 
   const updateMovement = (clientX) => {
     if (pointerInteracting.current !== null) {
       const delta = clientX - pointerInteracting.current;
-      pointerInteractionMovement.current = delta;
-      r.set(r.get() + delta / MOVEMENT_DAMPING);
+      pointerInteractionMovement.current = delta / MOVEMENT_DAMPING;
     }
   };
 
@@ -75,24 +69,29 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
     window.addEventListener("resize", onResize);
     onResize();
 
+    const devicePixelRatio = Math.min(1.5, window.devicePixelRatio || 1);
     const globe = createGlobe(canvasRef.current, {
       ...config,
-      width: width * 2,
-      height: width * 2,
+      width: Math.round(width * devicePixelRatio),
+      height: Math.round(width * devicePixelRatio),
+      devicePixelRatio,
       onRender: (state) => {
         if (!pointerInteracting.current) phi += 0.005;
-        state.phi = phi + rs.get();
-        state.width = width * 2;
-        state.height = width * 2;
+        state.phi = phi + pointerInteractionMovement.current;
+        state.width = Math.round(width * devicePixelRatio);
+        state.height = Math.round(width * devicePixelRatio);
       },
     });
 
-    setTimeout(() => (canvasRef.current.style.opacity = "1"), 0);
+    setTimeout(() => {
+      if (canvasRef.current) canvasRef.current.style.opacity = "1";
+    }, 0);
+
     return () => {
       globe.destroy();
       window.removeEventListener("resize", onResize);
     };
-  }, [rs, config]);
+  }, [config]);
 
   return (
     <div
