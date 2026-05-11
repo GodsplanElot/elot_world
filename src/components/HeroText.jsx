@@ -2,7 +2,7 @@ import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
 
 const HeroText = () => {
-  const words = ["Sercure", "Modern", "Scalable"];
+  const words = ["Modern", "Secure", "Scalable"];
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -18,7 +18,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          HI, I'm Elot
+          HI, I'm ELot
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
@@ -28,9 +28,10 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            A Developer <br /> Dedicated to Crafting
+            Full Stack Software Developer
           </motion.p>
           <motion.div
+            className="mt-6"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -42,18 +43,27 @@ const HeroText = () => {
             />
           </motion.div>
           <motion.p
-            className="text-4xl font-medium text-neutral-300"
+            className="max-w-xl mt-6 text-base font-medium text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web solutions
+            Results-driven full stack developer building scalable web and mobile applications with TypeScript, React, Next.js, Node.js, NestJS, and modern cloud deployment workflows.
+          </motion.p>
+          <motion.p
+            className="mt-4 text-base text-neutral-400"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 2 }}
+          >
+            Based in Ikeja, Lagos, Nigeria
           </motion.p>
         </div>
       </div>
       {/* Mobile View */}
-      <div className="flex- flex-col space-y-6 md:hidden">
+      <div className="flex flex-col space-y-6 md:hidden">
         <motion.p
           className="text-4xl font-medium"
           variants={variants}
@@ -65,15 +75,25 @@ const HeroText = () => {
         </motion.p>
         <div>
           <motion.p
-            className="text-5xl font-black text-neutral-300"
+            className="text-4xl font-black text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            Buliding
+            Full Stack
+          </motion.p>
+          <motion.p
+            className="text-4xl font-black text-neutral-300"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 1.3 }}
+          >
+            Software Developer
           </motion.p>
           <motion.div
+            className="mt-4"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -85,13 +105,13 @@ const HeroText = () => {
             />
           </motion.div>
           <motion.p
-            className="text-4xl font-black text-neutral-300"
+            className="mt-4 text-base font-medium text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Applications
+            Based in Ikeja, Lagos, Nigeria
           </motion.p>
         </div>
       </div>
