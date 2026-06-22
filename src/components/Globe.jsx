@@ -36,8 +36,8 @@ const GLOBE_CONFIG = {
 };
 
 export function Globe({ className, config = GLOBE_CONFIG }) {
-  let phi = 0;
-  let width = 0;
+  const phi = useRef(0);
+  const width = useRef(0);
   const canvasRef = useRef(null);
   const pointerInteracting = useRef(null);
   const pointerInteractionMovement = useRef(0);
@@ -62,7 +62,7 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
   useEffect(() => {
     const onResize = () => {
       if (canvasRef.current) {
-        width = canvasRef.current.offsetWidth;
+        width.current = canvasRef.current.offsetWidth;
       }
     };
 
@@ -72,14 +72,14 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
     const devicePixelRatio = Math.min(1.5, window.devicePixelRatio || 1);
     const globe = createGlobe(canvasRef.current, {
       ...config,
-      width: Math.round(width * devicePixelRatio),
-      height: Math.round(width * devicePixelRatio),
+      width: Math.round(width.current * devicePixelRatio),
+      height: Math.round(width.current * devicePixelRatio),
       devicePixelRatio,
       onRender: (state) => {
-        if (!pointerInteracting.current) phi += 0.005;
-        state.phi = phi + pointerInteractionMovement.current;
-        state.width = Math.round(width * devicePixelRatio);
-        state.height = Math.round(width * devicePixelRatio);
+        if (!pointerInteracting.current) phi.current += 0.005;
+        state.phi = phi.current + pointerInteractionMovement.current;
+        state.width = Math.round(width.current * devicePixelRatio);
+        state.height = Math.round(width.current * devicePixelRatio);
       },
     });
 

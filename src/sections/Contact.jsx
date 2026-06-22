@@ -3,6 +3,9 @@ import emailjs from "@emailjs/browser";
 import Alert from '../components/Alert';
 import { Particles } from '../components/Particles';
 
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID ?? "service_qllkveo";
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? "template_42ocnbb";
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY ?? "gCERnudKpJVh9LScn";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -22,8 +25,7 @@ const Contact = () => {
 
 
     try {
-      console.log ("From submitted")
-      await emailjs.send("service_qllkveo", "template_42ocnbb", 
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, 
         {
         from_name: formData.name,
         to_name: "Elot",
@@ -31,26 +33,25 @@ const Contact = () => {
         to_email: "mr.godsplanelot@gmail.com",
         message: formData.message,
       },
-    "gCERnudKpJVh9LScn");
-      //service_qllkveo
-      //template_42ocnbb
+    EMAILJS_PUBLIC_KEY);
       setIsLoading(false);
       setAlertType("success");
       setAlertMessage("Your message has been sent successfully!");
       setShowAlert(true);
       setFormData({name:"", email:"", message:""});
-    } catch (error) { 
+    } catch { 
       setIsLoading(false);
-      console.log( error);
-      alert("Failed");
+      setAlertType("danger");
+      setAlertMessage("Your message could not be sent. Please try again.");
+      setShowAlert(true);
      }
 
 
   };
 
   return (
-    <section className="relative flex items-center c-space section-spacing">
-      <Particles className="absolute inset-0 -z-50" quality={100} ease={80} color={"#ffffff"} refresh />
+    <section id="contact" className="relative flex items-center c-space section-spacing">
+      <Particles className="absolute inset-0 -z-50" quantity={100} ease={80} color={"#ffffff"} refresh />
       {showAlert &&  <Alert type={alertType} text={alertMessage} />}
       <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
         
@@ -108,6 +109,7 @@ const Contact = () => {
 
           <button
             type="submit"
+            disabled={isLoading}
             className="w-full px-6 py-3 mt-2 font-medium text-white rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:via-purple-500 hover:to-blue-500 hover-animation"
           >
             {!isLoading ? "Send" : "Sending..."}

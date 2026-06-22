@@ -1,5 +1,5 @@
- import { twMerge } from "tailwind-merge";
-import React, { useEffect, useRef, useState } from "react";
+import { twMerge } from "tailwind-merge";
+import { useEffect, useRef, useState } from "react";
 
 function MousePosition() {
   const [mousePosition, setMousePosition] = useState({
@@ -89,19 +89,21 @@ export const Particles = ({
       }
       window.removeEventListener("resize", handleResize);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [color]);
 
   useEffect(() => {
     onMouseMove();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mousePosition.x, mousePosition.y]);
 
   useEffect(() => {
     initCanvas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refresh]);
 
   const initCanvas = () => {
     resizeCanvas();
-    drawParticles();
   };
 
   const onMouseMove = () => {
@@ -189,15 +191,6 @@ export const Particles = ({
         canvasSize.current.w,
         canvasSize.current.h
       );
-    }
-  };
-
-  const drawParticles = () => {
-    clearContext();
-    const particleCount = quantity;
-    for (let i = 0; i < particleCount; i++) {
-      const circle = circleParams();
-      drawCircle(circle);
     }
   };
 

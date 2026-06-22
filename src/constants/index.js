@@ -1,18 +1,50 @@
 export const myProjects = [
   {
     id: 1,
-    title: "Creator Wallet Platform (Under NDA)",
+    title: "Creator Wallet Platform",
     description:
-      "Mobile creator wallet platform focused on monetization and financial management workflows.",
+      "A mobile-first creator finance platform for wallet balances, transactions, creator earnings, and account verification workflows.",
     subDescription: [
-      "Built frontend architecture and scalable workflows using TypeScript and modern web technologies.",
-      "Integrated payment, wallet, and financial management systems for creators.",
-      "Optimized performance for responsive mobile and web interfaces.",
-      "Supported secure API integrations and maintainable app architecture.",
+      "Built a polished dashboard experience for creator balances, recent activity, conversions, and wallet actions.",
+      "Designed user flows around KYC, account security, financial visibility, and monetization activity.",
+      "Focused on responsive interface behavior, clear mobile navigation, and a dark visual system for finance-heavy workflows.",
+      "Prepared the frontend structure for secure API integration and future production wallet operations.",
     ],
-    href: "",
+    href: "https://global-creator-wallet.vercel.app",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/projects/my-creator-wallet/creator-wallet-header.png",
+    images: [
+      {
+        src: "/assets/projects/my-creator-wallet/creator-wallet-header.png",
+        title: "Wallet Dashboard",
+        description:
+          "Introduces the creator wallet dashboard with account balance, quick actions, recent activity, and creator-focused financial context.",
+      },
+      {
+        src: "/assets/projects/my-creator-wallet/my-creator-wallet-kyc-page.png",
+        title: "KYC Verification",
+        description:
+          "Shows the identity verification flow used to support trust, compliance readiness, and secure access to wallet features.",
+      },
+      {
+        src: "/assets/projects/my-creator-wallet/Screenshot 2026-06-22 003000.png",
+        title: "Creator Activity",
+        description:
+          "Highlights the activity layer where creator earnings, transfers, and account events are surfaced clearly.",
+      },
+      {
+        src: "/assets/projects/my-creator-wallet/Screenshot 2026-06-22 003046.png",
+        title: "Financial Actions",
+        description:
+          "Covers the wallet action area for funding, sending, converting, and managing creator balances.",
+      },
+      {
+        src: "/assets/projects/my-creator-wallet/Screenshot 2026-06-22 003108.png",
+        title: "Mobile Product Flow",
+        description:
+          "Shows the mobile-optimized layout and navigation pattern designed for repeated creator finance usage.",
+      },
+    ],
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "JavaScript", path: "/assets/logos/javascript.svg" },
@@ -22,18 +54,50 @@ export const myProjects = [
   },
   {
     id: 2,
-    title: "Prep Mate — AI-Powered JAMB Platform",
+    title: "Prep Mate - AI-Powered JAMB Platform",
     description:
-      "AI-driven educational platform to help JAMB students prepare more effectively for exams.",
+      "A CBT-focused learning platform for UTME/JAMB preparation with practice questions, notes, syllabus support, and progress-oriented study flows.",
     subDescription: [
-      "Developed a responsive platform with Gemini-powered assessment and recommendation systems.",
-      "Built AI-generated performance analysis and score prediction features.",
-      "Created personalized study improvement recommendations and progress tracking.",
-      "Implemented responsive frontend architecture and backend integrations.",
+      "Built a focused landing and product experience for students preparing for UTME/JAMB exams.",
+      "Structured the interface around practice questions, notes, novels, syllabus guidance, and computer-based testing workflows.",
+      "Designed the experience to communicate trust, exam readiness, and quick access to desktop study software.",
+      "Prepared the platform for recommendation-driven study flows and performance-oriented learning features.",
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/auth-system.jpg",
+    image: "/assets/projects/prep-mate/prep-mate-header.png",
+    images: [
+      {
+        src: "/assets/projects/prep-mate/prep-mate-header.png",
+        title: "Practice Software Landing",
+        description:
+          "Presents the core Prep Mate offer: CBT practice software for UTME preparation with questions, notes, novels, and syllabus support.",
+      },
+      {
+        src: "/assets/projects/prep-mate/Screenshot 2026-06-21 235112.png",
+        title: "Exam Preparation Flow",
+        description:
+          "Shows how the platform guides students into structured exam preparation and focused learning sessions.",
+      },
+      {
+        src: "/assets/projects/prep-mate/Screenshot 2026-06-21 235224.png",
+        title: "Practice Interface",
+        description:
+          "Highlights the CBT-style interface where students can answer questions and prepare under exam-like conditions.",
+      },
+      {
+        src: "/assets/projects/prep-mate/Screenshot 2026-06-21 235249.png",
+        title: "Study Progress",
+        description:
+          "Covers the learning journey across subjects, topics, and practice activity.",
+      },
+      {
+        src: "/assets/projects/prep-mate/Screenshot 2026-06-21 235318.png",
+        title: "Desktop Product Experience",
+        description:
+          "Shows the product positioning around a downloadable Windows experience for serious study sessions.",
+      },
+    ],
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "JavaScript", path: "/assets/logos/javascript.svg" },
@@ -43,18 +107,50 @@ export const myProjects = [
   },
   {
     id: 3,
-    title: "Task Play — Rewards & Referral Platform",
+    title: "Task Play - Rewards & Referral Platform",
     description:
-      "Task-based rewards platform where users earn incentives by completing digital tasks.",
+      "A rewards and referral platform where users complete social tasks, earn points, and move through incentive-driven engagement flows.",
     subDescription: [
-      "Built referral and reward workflows for user engagement and retention.",
-      "Integrated Paystack payment flows and webhook transaction processing.",
-      "Created point purchase functionality, task management, and user dashboards.",
-      "Designed scalable frontend architecture with backend API support.",
+      "Built a conversion-focused landing page explaining the earning model, task flow, and account creation path.",
+      "Designed user journeys around task completion, referrals, points, payments, and trust-building platform messaging.",
+      "Supported transaction-oriented workflows including point purchases, reward activity, and payment gateway readiness.",
+      "Created a bold fintech-style interface that communicates active users, earnings potential, and onboarding urgency.",
     ],
-    href: "",
+    href: "https://taskplay.com.ng",
     logo: "",
-    image: "/assets/projects/blazor-app.jpg",
+    image: "/assets/projects/TaskPlay/task-play-header.png",
+    images: [
+      {
+        src: "/assets/projects/TaskPlay/task-play-header.png",
+        title: "Rewards Landing Page",
+        description:
+          "Introduces the platform promise with a high-impact earning message and a clear path to account creation.",
+      },
+      {
+        src: "/assets/projects/TaskPlay/Screenshot 2026-06-21 235544.png",
+        title: "How It Works",
+        description:
+          "Explains the task-based earning model and helps users understand the value exchange before signing up.",
+      },
+      {
+        src: "/assets/projects/TaskPlay/Screenshot 2026-06-21 235643.png",
+        title: "Earnings Flow",
+        description:
+          "Shows the reward-oriented parts of the experience where users connect tasks to measurable earning outcomes.",
+      },
+      {
+        src: "/assets/projects/TaskPlay/Screenshot 2026-06-21 235741.png",
+        title: "Support and Trust",
+        description:
+          "Highlights support, platform confidence, and onboarding details that reduce friction for new users.",
+      },
+      {
+        src: "/assets/projects/TaskPlay/Screenshot 2026-06-21 235916.png",
+        title: "Account Onboarding",
+        description:
+          "Shows the sign-in and account creation path that moves visitors from interest into active participation.",
+      },
+    ],
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "JavaScript", path: "/assets/logos/javascript.svg" },
@@ -66,16 +162,42 @@ export const myProjects = [
     id: 4,
     title: "Leng Tech Website Redesign",
     description:
-      "Redesigning the Leng Tech homepage and frontend systems with modern UI/UX and performance improvements.",
+      "A corporate website refresh for Leng Tech, focused on service clarity, professional positioning, and a stronger digital presence.",
     subDescription: [
-      "Developed responsive user interfaces and optimized page performance.",
-      "Improved content structure, accessibility, and visual consistency.",
-      "Collaborated on component architecture for client-facing digital products.",
-      "Supported deployment and QA workflows during the redesign process.",
+      "Supported the redesign of a technology company website with a cleaner navigation structure and service-oriented content.",
+      "Improved the presentation of company capabilities, resources, portfolio access, careers, and contact pathways.",
+      "Worked around responsive layout, content hierarchy, and visual consistency for a professional B2B audience.",
+      "Contributed to QA and deployment readiness for a more credible client-facing web experience.",
     ],
-    href: "",
+    href: "https://lengtechltd.com",
     logo: "",
-    image: "/assets/projects/game-engine.jpg",
+    image: "/assets/projects/lengtech-website/lengtech-website-header.png",
+    images: [
+      {
+        src: "/assets/projects/lengtech-website/lengtech-website-header.png",
+        title: "Coming Soon State",
+        description:
+          "Shows the public-facing holding state while the company website redesign and content system move toward release.",
+      },
+      {
+        src: "/assets/projects/lengtech-website/Screenshot 2026-03-19 164650.png",
+        title: "Company Navigation",
+        description:
+          "Highlights the navigation model for services, technologies, company information, resources, portfolio, careers, and contact.",
+      },
+      {
+        src: "/assets/projects/lengtech-website/Screenshot 2026-06-22 001302.png",
+        title: "Service Positioning",
+        description:
+          "Represents the content direction for communicating technical services with clarity and confidence.",
+      },
+      {
+        src: "/assets/projects/lengtech-website/Screenshot 2026-06-22 001321.png",
+        title: "Professional Web Presence",
+        description:
+          "Shows the visual system and page structure being prepared for a more refined corporate technology website.",
+      },
+    ],
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "JavaScript", path: "/assets/logos/javascript.svg" },
@@ -85,18 +207,50 @@ export const myProjects = [
   },
   {
     id: 5,
-    title: "E-Commerce Platforms (In Progress)",
+    title: "Ekana Cosmetics E-Commerce Store",
     description:
-      "Building client e-commerce solutions with payment integration, authentication, and admin workflows.",
+      "A refined cosmetics storefront for glosses, liners, and lashes, built around product discovery, mobile shopping, and brand presentation.",
     subDescription: [
-      "Implemented product catalog systems and inventory management workflows.",
-      "Integrated secure payment gateways and user authentication systems.",
-      "Developed responsive customer experiences and admin dashboards.",
-      "Focused on scalable frontend and API-backed backend architecture.",
+      "Created a polished storefront experience for a beauty brand with category navigation and product-led calls to action.",
+      "Designed the landing experience around luxury styling, clear shopping routes, and mobile-friendly browsing.",
+      "Structured product sections for glosses, liners, lashes, search, and cart access.",
+      "Prepared the commerce flow for future checkout, account, inventory, and payment integrations.",
     ],
-    href: "",
+    href: "https://ekana-store-web.vercel.app",
     logo: "",
-    image: "/assets/projects/wordpress-theme.jpg",
+    image: "/assets/projects/ecomerce-store/ecommerce-store-header.png",
+    images: [
+      {
+        src: "/assets/projects/ecomerce-store/ecommerce-store-header.png",
+        title: "Beauty Storefront",
+        description:
+          "Introduces the Ekana Cosmetics storefront with refined visuals, product categories, and a clear shopping entry point.",
+      },
+      {
+        src: "/assets/projects/ecomerce-store/Screenshot 2026-06-22 001433.png",
+        title: "Category Shopping",
+        description:
+          "Shows how visitors move into glosses, liners, lashes, and product categories from the homepage experience.",
+      },
+      {
+        src: "/assets/projects/ecomerce-store/Screenshot 2026-06-22 001445.png",
+        title: "Product Discovery",
+        description:
+          "Highlights product browsing patterns and the interface structure for evaluating cosmetics quickly.",
+      },
+      {
+        src: "/assets/projects/ecomerce-store/Screenshot 2026-06-22 001500.png",
+        title: "Mobile Commerce Flow",
+        description:
+          "Covers the responsive shopping experience for users exploring and purchasing from smaller screens.",
+      },
+      {
+        src: "/assets/projects/ecomerce-store/Screenshot 2026-06-22 001521.png",
+        title: "Cart-Ready Experience",
+        description:
+          "Represents the storefront flow prepared for cart, search, and checkout-oriented commerce behavior.",
+      },
+    ],
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "JavaScript", path: "/assets/logos/javascript.svg" },
@@ -118,6 +272,26 @@ export const myProjects = [
     href: "",
     logo: "",
     image: "/assets/projects/elearning.jpg",
+    images: [
+      {
+        src: "/assets/projects/elearning.jpg",
+        title: "Deployment Pipeline",
+        description:
+          "Summarizes the delivery workflow from source control through CI/CD and production deployment.",
+      },
+      {
+        src: "/assets/projects/game-engine.jpg",
+        title: "Server Runtime",
+        description:
+          "Explains the Linux, Nginx, Docker, and process-management layer used to run production web applications.",
+      },
+      {
+        src: "/assets/projects/blazor-app.jpg",
+        title: "Infrastructure Support",
+        description:
+          "Shows the cloud operations side, including AWS EC2, Docker Compose, and Terraform-backed environment work.",
+      },
+    ],
     tags: [
       { id: 1, name: "JavaScript", path: "/assets/logos/javascript.svg" },
       { id: 2, name: "Git", path: "/assets/logos/git.svg" },
@@ -125,31 +299,135 @@ export const myProjects = [
       { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
     ],
   },
+  {
+    id: 7,
+    title: "Toxic Reels Streaming Platform",
+    description:
+      "A media discovery and streaming-style web platform for browsing movies, categories, trending titles, ratings, and watch-focused content.",
+    subDescription: [
+      "Built a dark entertainment interface with hero carousels, trending sections, search affordances, and authentication entry points.",
+      "Structured movie discovery around categories, TV series, ratings, and prominent watch calls to action.",
+      "Focused on responsive visual hierarchy, media-rich layouts, and a polished product feel for entertainment browsing.",
+      "Prepared the frontend for live content feeds, user accounts, media metadata, and future streaming integrations.",
+    ],
+    href: "https://toxicreels.com",
+    logo: "",
+    image: "/assets/projects/Toxic-reels/toxic-reels-header.png",
+    images: [
+      {
+        src: "/assets/projects/Toxic-reels/toxic-reels-header.png",
+        title: "Streaming Homepage",
+        description:
+          "Introduces the Toxic Reels homepage with featured movie content, search, login, sign-up, and a bold dark media interface.",
+      },
+      {
+        src: "/assets/projects/Toxic-reels/Screenshot 2026-06-22 030641.png",
+        title: "Featured Content",
+        description:
+          "Shows the hero carousel experience for highlighting a movie, rating, genre, and primary watch action.",
+      },
+      {
+        src: "/assets/projects/Toxic-reels/Screenshot 2026-06-22 030654.png",
+        title: "Trending Discovery",
+        description:
+          "Highlights the browsing layer where visitors can scan popular titles and evaluate content quickly.",
+      },
+      {
+        src: "/assets/projects/Toxic-reels/Screenshot 2026-06-22 030719.png",
+        title: "Category Navigation",
+        description:
+          "Covers the navigation model for moving through content categories, TV series, and media collections.",
+      },
+      {
+        src: "/assets/projects/Toxic-reels/Screenshot 2026-06-22 030754.png",
+        title: "Media Detail Flow",
+        description:
+          "Represents the deeper browsing path toward movie information, ratings, and watch decisions.",
+      },
+    ],
+    tags: [
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "JavaScript", path: "/assets/logos/javascript.svg" },
+      { id: 3, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 4, name: "Git", path: "/assets/logos/git.svg" },
+    ],
+  },
+  {
+    id: 8,
+    title: "AWS Cloud Practitioner Journey",
+    description:
+      "A cloud learning and implementation track focused on AWS fundamentals, deployment architecture, Linux operations, Docker workflows, and production readiness.",
+    subDescription: [
+      "Studying AWS Cloud Practitioner concepts across cloud value, shared responsibility, global infrastructure, pricing, security, and core services.",
+      "Building practical interest in EC2, IAM, S3, networking, monitoring, server deployment, and scalable hosting patterns.",
+      "Connecting cloud learning with hands-on deployment workflows using Linux, Docker, Nginx, GitHub Actions, and infrastructure planning.",
+      "Positioned as an in-progress professional development project that supports stronger full stack and DevOps delivery.",
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/elearning.jpg",
+    images: [
+      {
+        src: "/assets/projects/elearning.jpg",
+        title: "AWS Practitioner Roadmap",
+        description:
+          "Summarizes the ongoing AWS Cloud Practitioner learning path across cloud concepts, infrastructure, pricing, security, and service fundamentals.",
+      },
+      {
+        src: "/assets/projects/game-engine.jpg",
+        title: "Cloud Architecture Interest",
+        description:
+          "Represents the architecture side of the journey: compute, storage, networking, identity, observability, and deployment design.",
+      },
+      {
+        src: "/assets/projects/blazor-app.jpg",
+        title: "Deployment Practice",
+        description:
+          "Connects AWS learning to practical web deployment work with Linux servers, Docker, Nginx, CI/CD, and production operations.",
+      },
+    ],
+    tags: [
+      { id: 1, name: "AWS", path: "/assets/logos/azure.svg" },
+      { id: 2, name: "GitHub Actions", path: "/assets/logos/github.svg" },
+      { id: 3, name: "Docker", path: "/assets/logos/visualstudiocode.svg" },
+      { id: 4, name: "Replace Tech", path: "/assets/logos/git.svg" },
+    ],
+  },
 ];
 
 export const mySocials = [
   {
     name: "WhatsApp",
-    href: "",
+    href: "https://wa.me/2349030814229",
     icon: "/assets/socials/whatsApp.svg",
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/ali-sanati/",
+    href: "",
     icon: "/assets/socials/linkedIn.svg",
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/ali.sanatidev/reels/",
+    href: "",
     icon: "/assets/socials/instagram.svg",
   },
 ];
 
 export const experiences = [
   {
+    title: "Undergraduate Student",
+    job: "Mountain Top University",
+    date: "2024 - Present",
+    contents: [
+      "Currently pursuing undergraduate studies while continuing to build practical software engineering, cloud, and product development experience.",
+      "Balancing academic work with hands-on full stack projects, deployment practice, and professional growth in modern web technologies.",
+      "Strengthening foundations in computing, problem-solving, and technical communication through academic and independent learning.",
+    ],
+  },
+  {
     title: "Intern Software Developer",
     job: "Leng Tech",
-    date: "2023 – Present",
+    date: "2023 - Present",
     contents: [
       "Contributing to scalable web applications using TypeScript, React.js, Next.js, and Node.js.",
       "Building core frontend systems for the updated Leng Tech homepage and internal digital products.",
@@ -160,7 +438,7 @@ export const experiences = [
   {
     title: "Senior IT Specialist",
     job: "Empowered Christian Church International",
-    date: "2023 – Present",
+    date: "2023 - Present",
     contents: [
       "Led design, development, and deployment of digital platforms and communication systems.",
       "Managed website architecture, branding assets, and online communication tools.",
@@ -171,7 +449,7 @@ export const experiences = [
   {
     title: "Web Design Contractor",
     job: "Face of Abi Global Pageant (FOAGP)",
-    date: "2021 – Present",
+    date: "2021 - Present",
     contents: [
       "Developed branding systems, visual assets, and promotional materials for event campaigns.",
       "Managed multiple design and development projects while maintaining delivery standards.",
@@ -181,7 +459,7 @@ export const experiences = [
   {
     title: "Graphic Design Specialist",
     job: "Freelance",
-    date: "2017 – Present",
+    date: "2017 - Present",
     contents: [
       "Designed marketing materials, advertisements, brochures, and branding assets for businesses.",
       "Delivered creative solutions across digital and print campaigns.",
@@ -191,51 +469,51 @@ export const experiences = [
 ];
 export const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://robohash.org/jack",
+    name: "Founder Collaboration",
+    username: "Product build",
+    body: "Reliable delivery across frontend architecture, payments, dashboards, and deployment workflows.",
+    img: "https://robohash.org/founder-collaboration",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://robohash.org/jill",
+    name: "Startup Support",
+    username: "Fast iteration",
+    body: "Strong ownership from UI implementation through API integration and production handoff.",
+    img: "https://robohash.org/startup-support",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://robohash.org/john",
+    name: "Learning Platform",
+    username: "Edtech",
+    body: "Built responsive study flows, AI-assisted features, and clear student-facing experiences.",
+    img: "https://robohash.org/learning-platform",
   },
   {
-    name: "Alice",
-    username: "@alice",
-    body: "This is hands down the best thing I've experienced. Highly recommend!",
-    img: "https://robohash.org/alice",
+    name: "Rewards Platform",
+    username: "Fintech",
+    body: "Delivered referral, points, and payment workflows with attention to secure user journeys.",
+    img: "https://robohash.org/rewards-platform",
   },
   {
-    name: "Bob",
-    username: "@bob",
-    body: "Incredible work! The attention to detail is phenomenal.",
-    img: "https://robohash.org/bob",
+    name: "Cloud Workflow",
+    username: "Deployment",
+    body: "Hands-on support with Linux servers, Docker, Nginx, GitHub Actions, and AWS EC2.",
+    img: "https://robohash.org/cloud-workflow",
   },
   {
-    name: "Charlie",
-    username: "@charlie",
-    body: "This exceeded all my expectations. Absolutely stunning!",
-    img: "https://robohash.org/charlie",
+    name: "Design Systems",
+    username: "Frontend",
+    body: "Balanced visual polish with maintainable components and responsive implementation.",
+    img: "https://robohash.org/design-systems",
   },
   {
-    name: "Dave",
-    username: "@dave",
-    body: "Simply breathtaking. The best decision I've made in a while.",
-    img: "https://robohash.org/dave",
+    name: "Web Redesign",
+    username: "Client site",
+    body: "Improved content structure, interface consistency, and performance-focused page delivery.",
+    img: "https://robohash.org/web-redesign",
   },
   {
-    name: "Eve",
-    username: "@eve",
-    body: "So glad I found this. It has changed the game for me.",
-    img: "https://robohash.org/eve",
+    name: "Media Team",
+    username: "Leadership",
+    body: "Coordinated digital assets, website updates, and brand execution for a multi-person team.",
+    img: "https://robohash.org/media-team",
   },
 ];

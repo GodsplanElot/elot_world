@@ -34,6 +34,7 @@ export function OrbitingCircles({
         const angle = (360 / React.Children.count(children)) * index;
         return (
           <div
+            key={index}
             style={{
               "--duration": calculatedDuration,
               "--radius": radius,

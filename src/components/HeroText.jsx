@@ -8,9 +8,9 @@ const HeroText = () => {
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
+    <div className="relative z-10 w-full max-w-5xl mx-auto text-center rounded-3xl bg-clip-text">
       {/* Desktop View */}
-      <div className="flex-col hidden md:flex c-space">
+      <div className="flex-col items-center hidden md:flex c-space">
         <motion.h1
           className="text-4xl font-medium"
           variants={variants}
@@ -20,9 +20,9 @@ const HeroText = () => {
         >
           HI, I'm ELot
         </motion.h1>
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-center">
           <motion.p
-            className="text-5xl font-medium text-neutral-300"
+            className="text-5xl font-medium text-center text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -43,7 +43,7 @@ const HeroText = () => {
             />
           </motion.div>
           <motion.p
-            className="max-w-xl mt-6 text-base font-medium text-neutral-300"
+            className="max-w-2xl mt-6 text-base font-medium text-center text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -52,7 +52,7 @@ const HeroText = () => {
             Results-driven full stack developer building scalable web and mobile applications with TypeScript, React, Next.js, Node.js, NestJS, and modern cloud deployment workflows.
           </motion.p>
           <motion.p
-            className="mt-4 text-base text-neutral-400"
+            className="mt-4 text-base text-center text-neutral-400"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -63,7 +63,7 @@ const HeroText = () => {
         </div>
       </div>
       {/* Mobile View */}
-      <div className="flex flex-col space-y-6 md:hidden">
+      <div className="flex flex-col items-center space-y-6 md:hidden">
         <motion.p
           className="text-4xl font-medium"
           variants={variants}

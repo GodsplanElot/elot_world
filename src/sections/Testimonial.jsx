@@ -16,7 +16,7 @@ const ReviewCard = ({ img, name, username, body }) => {
           className="rounded-full bg-white/10"
           width="32"
           height="32"
-          alt=""
+          alt={`${name} avatar`}
           src={img}
         />
         <div className="flex flex-col">
